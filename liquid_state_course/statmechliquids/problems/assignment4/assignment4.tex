@@ -1,0 +1,101 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Short Sectioned Assignment
+% LaTeX Template
+% Version 1.0 (5/5/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[paper=a4, fontsize=11pt]{scrartcl} % A4 paper and 11pt font size
+
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+\usepackage[english]{babel} % English language/hyphenation
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage{sectsty} % Allows customizing section commands
+\allsectionsfont{\centering \normalfont\scshape} % Make all sections centered, the default font and small caps
+
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead{} % No page header - if you want one, create it in the same way as the footers below
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+\fancyfoot[R]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{0pt} % Remove header underlines
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+
+\numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+\title{\vspace{-3cm}
+\huge Assignment 4 \\ % The assignment title
+\horrule{2pt} \\ % Thick bottom horizontal rule
+\vspace{-2cm}
+}
+
+\author{} % Your name
+
+\date{} % Today's date or a custom date
+
+\begin{document}
+
+\maketitle % Print the title
+
+
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 1
+%----------------------------------------------------------------------------------------
+
+\section*{Problem 1: The density expansion of the PY equation}
+
+The Percus-Yevick equation is
+\begin{align*}
+ y_{12} = 1+\rho \int dr_3 f_{13}y_{13}h_{23},
+\end{align*}
+where $y_{12} \equiv y(|\mathbf{r}_1-\mathbf{r}_2|)$ and the same for the other functions. The function $h$ is related 
+to $y$ by $y(r)=e^{-\beta u(r)} \left[ h(r) +1 \right]$. You can use the expression for $y_{12}$ to replace the 
+functions $y$ on the RHS of the equation. Repeating this procedure generates a serie expansion of $y_{12}$ in powers of
+$\rho$ (this is called a Neumann series). Only the last term in this series depends on $y$ and for a small density you 
+can truncate the series somewhere, which results in a closed approximate equation for $y$.
+\\
+
+A)\hspace{.5cm}
+Write down the series solution for $y_{12}$ of the Percus-Yevick equation including the $\rho^2$ term and neglecting the
+the higher order term.
+Your result should be writen as integrals over $f$ functions.
+\\
+B)\hspace{.5cm}
+Replace the $f$ functions by the corresponding diagrams.
+\\
+
+Because the result uses the PY-approximation you will not get all the diagrams for the order $\rho^2$ term that was
+shown in the lectures.
+%----------------------------------------------------------------------------------------
+
+\end{document}

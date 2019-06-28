@@ -1,0 +1,208 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Short Sectioned Assignment
+% LaTeX Template
+% Version 1.0 (5/5/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[paper=a4, fontsize=11pt]{scrartcl} % A4 paper and 11pt font size
+
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+\usepackage[english]{babel} % English language/hyphenation
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage{sectsty} % Allows customizing section commands
+\allsectionsfont{\centering \normalfont\scshape} % Make all sections centered, the default font and small caps
+
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead{} % No page header - if you want one, create it in the same way as the footers below
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+\fancyfoot[R]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{0pt} % Remove header underlines
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+
+\numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+\title{\vspace{-3cm}
+\huge Assignment 3 \\ % The assignment title
+\horrule{2pt} \\ % Thick bottom horizontal rule
+\vspace{-2cm}
+}
+
+\author{} % Your name
+
+\date{} % Today's date or a custom date
+
+\begin{document}
+
+\maketitle % Print the title
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 1
+%----------------------------------------------------------------------------------------
+\section*{Problem 1: Number Fluctuations and Isothermal compressibility}
+
+For the derivation of the compressibility equation we needed the relation between the fluctuations in the number of
+particles and the isothermal compressibility:
+\begin{align*}
+ \frac{\overline{N^2} - \overline{N}^2}{\overline{N}} = \rho k T \kappa
+ \ \ \ \text{with} \ \ \ 
+ \kappa \equiv - \frac{1}{V} \left(\frac{\partial V}{\partial P}\right)_{T,N},
+\end{align*}
+where $\kappa$ is called the isothermal compressibility.
+
+
+
+A) \hspace{.5cm} The first step is to express the number fluctuations as some partial derivative. Later you can 
+relate that derivative to $\left( \frac{\partial V}{\partial P} \right)_{T,N}$ by using thermodynamic relations.
+The average of a function $A(N,j)$ in a grand canonical ensemble is
+\begin{align*}
+ \overline{A} = \sum_{N,j} A(N,j) P_{N,j},
+\end{align*}
+where $j$ labels the energy state, and 
+\begin{align*}
+ P_{N,j} = \frac{e^{-\beta E_{N,j}+\beta \mu N}}{\Xi(V,\beta,\mu)}
+\ \ \ \ \text{and} \ \ \ \ \
+\Xi(V,\beta,\mu)  = \sum_{N,j} e^{-\beta E_{N,j}+\beta \mu N}.
+\end{align*}
+
+Show that
+\begin{align*}
+ \overline{N^2}  = kT \left( \frac{\partial \overline{N}}{\partial \mu}\right)_{T,V} + 
+ \overline{N}^2.
+\end{align*}
+So that in the thermodynamic limit
+\begin{align*}
+  \overline{N^2}- \overline{N}^2  = kT \left( \frac{\partial N}{\partial \mu}\right)_{T,V}.
+\end{align*}
+
+
+
+B) \hspace{.5cm}  The number fluctuations are now expressed using a derivative with respect to the chemical potential, 
+but we want a derivative with volume and pressure with constant T and N. So we need to change the derivative with
+respect to the chemical potential to a derivative with respect to the pressure, and then we can use the cyclic rule 
+for partial
+derivatives to relate $\left( \frac{\partial N}{\partial P}\right)_{T,V}$ to the desired derivative.
+
+The thermodynamic potential corresponding to the grand canonical ensemble is the grand potential:
+\begin{align*}
+ \Omega = -PV \equiv A - \mu N,
+\end{align*}
+where $A$ is the Helmholtz free energy.
+Use this to show that
+\begin{align*}
+ \left( \frac{\partial N}{\partial \mu} \right)_{T,V} = \frac{N}{V} \left( \frac{\partial N}{\partial P} \right)_{T,V}.
+\end{align*}
+
+C) \hspace{.5cm} Show that
+\begin{align*}
+ \left( \frac{\partial N}{\partial \mu} \right)_{V,T} = - \rho^2 \left( \frac{\partial V}{\partial P} \right)_{N,T},
+\end{align*}
+and use it to show that
+\begin{align*}
+ \frac{\overline{N^2} - \overline{N}^2}{\overline{N}} =
+ - \frac{kT\rho}{V} \left(\frac{\partial V}{\partial P}\right)_{T,N}.
+\end{align*}
+You can use the cyclic property of partial derivatives,
+\begin{align*}
+ \left(\frac{N}{P} \right)_{V,T}  \left(\frac{V}{N} \right)_{P,T}  \left(\frac{P}{V} \right)_{N,T} = -1,
+\end{align*}
+and $V=v N_a N$, where $v$ is the molar volume (the volume of one mole of gas at a given T and P)
+and $N_a$ is Avogadro's number.
+
+
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 2
+%----------------------------------------------------------------------------------------
+
+\section*{Problem 2: Fourier transformation of the Ornstein-Zernike Equation}
+
+Fourier transform the Ornstein-Zernike equation,
+\begin{align*}
+ h(|\mathbf{r}_1 - \mathbf{r}_2|)=c(|\mathbf{r}_1-\mathbf{r}_2|) +
+ \rho \int d\mathbf{r}_3 c(|\mathbf{r}_1-\mathbf{r}_3|)  h(|\mathbf{r}_2 - \mathbf{r}_3|),
+\end{align*}
+and show that
+\begin{align*}
+ \hat{C}(\mathbf{k}) = \frac{\hat{H}(\mathbf{k})}{1+\rho \hat{H}(\mathbf{k})}
+\ \ \ \ \text{and} \ \ \ 
+ \int d\mathbf{r} h(|\mathbf{r}|) = \hat{H}(0).
+\end{align*}
+Use the following definition of the Fourier transformation of a function $f(\mathbf{r})$ with $r\in \mathbb{R}^3$:
+\begin{align*}
+ \hat{F}(\mathbf{k}) = \int d^3 r \ \  e^{i \mathbf{k} \cdot \mathbf{r}} f(\mathbf{r}) \ \ \ \ \ \ \
+  f(\mathbf{r}) = \int \frac{d^3k}{(2 \pi)^3}\ \  e^{-i \mathbf{k} \cdot \mathbf{r}} \hat{F}(\mathbf{k}) .
+\end{align*}
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 3
+%----------------------------------------------------------------------------------------
+
+\section*{Problem 3: The equation of state of hard spheres}
+Use the pressure equation,
+\begin{align*}
+ \frac{P}{k T} = \rho - \frac{\rho^2}{6kT} \int_0^\infty dr 4 \pi r^3 u'(r)g(r),
+\end{align*}
+to derive the equation of state for hard spheres:
+\begin{align*}
+ \frac{P}{k T} = \rho - \frac{2 \pi \rho^2 \sigma^3}{3} g(\sigma_+),
+\end{align*}
+where $\sigma_+=\lim_{\delta\to 0} \sigma + \delta$. 
+The hard sphere potential is
+\begin{align*}
+u_{hs} = 
+ \begin{cases}
+  \infty,& \ \ \ \text{if}\ \  r<\sigma\\
+   0\ \ ,& \ \ \ \text{if}\ \  r>\sigma.
+ \end{cases}
+\end{align*}
+Note that neither of the cases contains $r=\sigma$ because only the limiting cases are well defined.
+So, for example, $\lim_{r\to\sigma_+}$ belongs to the $r>\sigma$ case.
+
+The problem with the integral is the derivative of the potential because the potential has an infinite discontinuity
+at $\sigma$. It is possible to write the integrant as some function times a derivative of an other 
+function which has a finite discontinuity at $\sigma$.
+To do this you need to define two new functions:
+\begin{align*}
+ y(r) = & e^{\beta u(r)}g(r), \\
+ e(r) = & e^{-\beta u(r)}.
+\end{align*}
+
+
+
+%----------------------------------------------------------------------------------------
+
+\end{document}

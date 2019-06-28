@@ -1,0 +1,8 @@
+N = 300
+L = 10.
+d = 0.9
+bs = 0.005
+itmax = 60000
+steps_per_it = 1000
+init_steps = 10000
+seed = 123456789
